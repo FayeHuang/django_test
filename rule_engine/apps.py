@@ -6,7 +6,7 @@ import sys
 
 class RuleEngineConfig(AppConfig):
     name = 'rule_engine'
-
+    # refs : https://docs.djangoproject.com/en/3.0/topics/cache/
     def ready(self):
         if sys.argv.count('migrate') == 0  and sys.argv.count('makemigrations') == 0:
             cp_bot = RuleBot('cp_rule')
